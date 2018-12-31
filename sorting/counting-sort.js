@@ -7,13 +7,18 @@
  * @return  {Array}
  */
 function countingSort(array) {
-  let temp = [0]; // 这里必须要对数组进行初始化操作
+  let temp = [];
   let newArray = [];
 
   // 先把数存到这个新数组里面
   for (let i = 0; i < array.length; ++i) {
     let val = array[i];
-    temp[val] = 1;
+    if (temp[val]) {
+      temp[val] ++;
+    } else {
+      // 如果 temp[val] === undefined
+      temp[val] = 1;
+    }
   }
   // 然后取出来排序
   for (let i = 0; i < temp.length; ++i) {
@@ -29,10 +34,10 @@ function countingSort(array) {
 }
 
 // test code
-// let testArray = [];
-// testArray = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
-// console.log('testArray: ', testArray);
-// console.log('counting sorting...');
-// testArray = countingSort(testArray);
-// console.log('end');
-// console.log('testArray: ', testArray);
+let testArray = [];
+testArray = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+console.log('testArray: ', testArray);
+console.log('counting sorting...');
+testArray = countingSort(testArray);
+console.log('end');
+console.log('testArray: ', testArray);
