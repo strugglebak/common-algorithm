@@ -8,8 +8,9 @@
  */
 function selectionSort(array) {
   let newArray = [];
-  let minIndex = 0;
-  for (let i = 0; i < array.length; ++i) { // 从第 i 个开始
+  for (let i = 0; i < array.length - 1; ++i) { // 从第 i 个开始
+    // 重新对最小值以及最小下标进行赋值
+    let minIndex = i;
     let minVal = array[i];
     for (let j = i + 1; j < array.length; ++j) { // 从第 i+1 个开始
       if (array[j] < minVal) {
@@ -33,9 +34,9 @@ function swap(array, preIndex, nextIndex) {
 
 // // test code
 // let testArray = [];
-// testArray = [31,10,14,37,14,11,3,6,49,0];
+// testArray = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
 // console.log('testArray: ', testArray);
-// console.log('bubble sorting...');
+// console.log('selection sorting...');
 // testArray = selectionSort(testArray);
 // console.log('end');
 // console.log('testArray: ', testArray);
