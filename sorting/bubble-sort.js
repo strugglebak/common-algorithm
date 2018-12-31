@@ -10,7 +10,7 @@ function bubbleSort(array) {
   let indexOfLastUnsortedElement = array.length - 1;
   let newArray = [];
   let isSwapped = true;
-  while(isSwapped) {
+  while (isSwapped) {
     isSwapped = false;
     for (let i = 0; i < indexOfLastUnsortedElement; ++i) {
       console.log('newArray', newArray);
