@@ -31,11 +31,11 @@ function swap(array, preIndex, nextIndex) {
   return array;
 }
 
-// test code
-let testArray = [];
-testArray = [31,10,14,37,14,11,3,6,49,0];
-console.log('testArray: ', testArray);
-console.log('bubble sorting...');
-testArray = selectionSort(testArray);
-console.log('end');
-console.log('testArray: ', testArray);
+// // test code
+// let testArray = [];
+// testArray = [31,10,14,37,14,11,3,6,49,0];
+// console.log('testArray: ', testArray);
+// console.log('bubble sorting...');
+// testArray = selectionSort(testArray);
+// console.log('end');
+// console.log('testArray: ', testArray);
