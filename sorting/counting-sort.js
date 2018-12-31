@@ -7,17 +7,17 @@
  * @return  {Array}
  */
 function countingSort(array) {
-  let temp = [];
+  const buffer = [];
   let newArray = [];
 
   // 先把数存到这个新数组里面
   for (let i = 0; i < array.length; ++i) {
-    let val = array[i];
-    if (temp[val]) {
-      temp[val] ++;
+    const val = array[i];
+    if (buffer[val]) {
+      buffer[val] ++;
     } else {
       // 如果 temp[val] === undefined
-      temp[val] = 1;
+      buffer[val] = 1;
     }
   }
   // 然后取出来排序
