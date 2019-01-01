@@ -73,7 +73,7 @@ function swap(array, preIndex, nextIndex) {
 // let testArray = [];
 // testArray = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
 // console.log('testArray: ', testArray);
-// console.log('counting sorting...');
+// console.log('quick sorting...');
 // testArray = quickSort(testArray, 0, testArray.length - 1);
 // console.log('end');
 // console.log('testArray: ', testArray);
