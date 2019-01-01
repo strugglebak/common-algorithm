@@ -13,7 +13,6 @@ function bubbleSort(array) {
   while (isSwapped) {
     isSwapped = false;
     for (let i = 0; i < indexOfLastUnsortedElement; ++i) {
-      console.log('newArray', newArray);
       if (array[i] > array[i+1]) {
         newArray = swap(array, i, i+1);
         isSwapped = true;
