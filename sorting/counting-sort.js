@@ -7,26 +7,23 @@
  * @return  {Array}
  */
 function countingSort(array) {
-  const buffer = [];
-  let newArray = [];
 
-  // 先把数存到这个新数组里面
+  if (!array) return null;
+
+  // 将数据弄到 bucket 里面
+  // 每个 bucket[index] 里面的值是 array[i] 重复出现的次数
+  let bucket = [];
   for (let i = 0; i < array.length; ++i) {
-    const val = array[i];
-    if (buffer[val]) {
-      buffer[val] ++;
-    } else {
-      // 如果 temp[val] === undefined
-      buffer[val] = 1;
-    }
+    let index = array[i];
+    if (!bucket[index]) bucket[index] = 0;
+    bucket[index] ++;
   }
+
   // 然后取出来排序
-  for (let i = 0; i < temp.length; ++i) {
-    let length = temp[i];
-    if (length) {
-      for (let j = 0; j < length; ++j) {
-        newArray.push(i);
-      }
+  let newArray = [];
+  for (let i = 0; i < bucket.length; ++i) {
+    for (let j = 0; bucket[i] && j < bucket[i]; ++j) {
+      newArray.push(i);
     }
   }
 
@@ -34,10 +31,10 @@ function countingSort(array) {
 }
 
 // test code
-// let testArray = [];
-// testArray = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
-// console.log('testArray: ', testArray);
-// console.log('counting sorting...');
-// testArray = countingSort(testArray);
-// console.log('end');
-// console.log('testArray: ', testArray);
+let testArray = [];
+testArray = [0, 0, 11, 11, 3,44,38,50,47,15,36,26,27,2,44,4,19,50,48, 9999];
+console.log('testArray: ', testArray);
+console.log('counting sorting...');
+testArray = countingSort(testArray);
+console.log('end');
+console.log('testArray: ', testArray);
