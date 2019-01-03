@@ -21,8 +21,11 @@ function bucketSort(array) {
   // 将数据弄到 bucket 里面
   let bucket = [];
   for (let i = 0; i < array.length; ++i) {
-    bucket[array[i] - minValue] = [];
-    bucket[array[i] - minValue].push(array[i]);
+    let index = array[i] - minValue;
+    if (bucket[index] === null || bucket[index] === undefined) {
+      bucket[index] = [];
+    }
+    bucket[index].push(array[i]);
   }
 
   for (let i = 0; i < bucket.length; ++i) {
@@ -36,7 +39,7 @@ function bucketSort(array) {
 
 // // test code
 // let testArray = [];
-// testArray = [3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+// testArray = [0, 0, 11, 11, 3,44,38,50,47,15,36,26,27,2,44,4,19,50,48, 9999];
 // console.log('testArray: ', testArray);
 // console.log('bucket sorting...');
 // testArray = bucketSort(testArray);
