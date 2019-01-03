@@ -60,11 +60,11 @@ function radixSort(array) {
 }
 
 
-// test code
-let testArray = [];
-testArray = [0, 0, 11, 11, 3,44,38,50,47,15,36,26,27,2,44,4,19,50,48, 9999];
-console.log('testArray: ', testArray);
-console.log('radix sorting...');
-testArray = radixSort(testArray);
-console.log('end');
-console.log('testArray: ', testArray);
+// // test code
+// let testArray = [];
+// testArray = [0, 0, 11, 11, 3,44,38,50,47,15,36,26,27,2,44,4,19,50,48, 9999];
+// console.log('testArray: ', testArray);
+// console.log('radix sorting...');
+// testArray = radixSort(testArray);
+// console.log('end');
+// console.log('testArray: ', testArray);
