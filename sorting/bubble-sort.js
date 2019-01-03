@@ -7,6 +7,8 @@
  * @return  {Array}
  */
 function bubbleSort(array) {
+  if (!array) return null;
+
   let indexOfLastUnsortedElement = array.length - 1;
   let newArray = [];
   let isSwapped = true;

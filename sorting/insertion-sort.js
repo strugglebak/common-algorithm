@@ -7,6 +7,9 @@
  * @return  {Array}
  */
 function insertionSort(array) {
+
+  if (!array) return null;
+
   let val = 0;
   let j = 0;
   for (let i = 1; i < array.length; ++i) { // 数组第一个默认排序好

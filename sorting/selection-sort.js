@@ -7,6 +7,9 @@
  * @return  {Array}
  */
 function selectionSort(array) {
+
+  if (!array) return null;
+
   let newArray = [];
   for (let i = 0; i < array.length - 1; ++i) { // 从第 i 个开始
     // 重新对最小值以及最小下标进行赋值
